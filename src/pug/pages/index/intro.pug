@@ -1,0 +1,35 @@
+-
+  const introList = [
+    "Внедряем комплексные проекты и строим высокотехнологичный ИТ-ландшафт,",
+    "трансформируем ИТ-инфраструктуру, ",
+    "снижаем риски угроз информационной безопасности,",
+    "проектируем надежные инженерные системы и мультимедиа-комплексы различного масштаба и уровня сложности.",
+  ]
+
+-
+  const introSlider = [
+    {link: "#"},
+    {link: "#"},
+    {link: "#"},
+  ]
+
+section.intro(style="background-image: url('./assets/images/intro-bg.png')" )
+  .container
+    +intro-header("Создаем <span> цифровое превосходство<span>", false, true)
+    .intro__bottom
+      .intro__bottom-left
+        .intro__content-photo
+          +icon-multi("intro-photo")
+        ul.intro__content-list
+          for item in introList
+            li.intro__content-item= item
+      .intro__bottom-right
+        .intro__slider.swiper.js-init-slider(data-slides="1" )
+          +slider-navigation()
+          .swiper-wrapper
+            for item in introSlider
+              a.intro__slide.swiper-slide(href=item.link)
+                +pictureLazy("intro-slider-1.jpg")
+
+
+

@@ -237,6 +237,11 @@ a:focus {
   outline: none;
 }
 
+.js-accordion-content {
+  height: 0;
+  overflow: hidden;
+}
+
 .js-focus-visible button:focus:not(.focus-visible),
 .js-focus-visible a:focus:not(.focus-visible) {
   outline: none;
@@ -364,7 +369,7 @@ a:focus {
 }
 
 .text-t3-up {
-  font: var(--text-t3);
+  font: var(--text-t3-medium);
   text-transform: uppercase;
 }
 

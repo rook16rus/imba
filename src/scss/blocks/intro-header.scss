@@ -1,0 +1,98 @@
+.intro-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+
+  &__left {
+    grid-column: span 7;
+  }
+
+  &__title {
+    @extend .title-h1;
+
+    max-width: 78.5rem;
+
+    span {
+      color: var(--red-color);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 9rem;
+  }
+
+  &__button {
+    @extend .text-t3-up;
+
+    &:last-child {
+      margin-left: 4rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-column: span 5;
+  }
+
+  &__menu-list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2rem;
+  }
+
+  &__menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &.active {
+      .js-accordion-btn svg {
+        transform: scale(-1);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__menu-item-header {
+    display: inline-grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+
+    cursor: pointer;
+
+    @extend .text-t3-up;
+
+    svg {
+      width: 1.3rem;
+      height: 1.3rem;
+
+      transition: 0.3s;
+    }
+  }
+
+  &__menu-item-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  &__menu-item-list-item {
+    font: var(--text-t3);
+  }
+
+  &__search {
+    @extend .text-t3-up;
+  }
+
+  &__logo {
+    svg {
+      width: 11.8rem;
+      height: 7.7rem;
+    }
+  }
+}

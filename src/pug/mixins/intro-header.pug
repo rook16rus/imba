@@ -1,0 +1,85 @@
+-
+  const introMenu = [
+    {
+      title: "Каталог решений",
+      link: "#"
+    },
+    {
+      title: "Направления",
+      list: [
+        {
+          title: "Информационная безопасность",
+          link: "#"
+        },
+        {
+          title: "ИТ-инфраструктура",
+          link: "#"
+        },
+        {
+          title: "Мультимедийные решения",
+          link: "#"
+        },
+        {
+          title: "Инженерная инфраструктура",
+          link: "#"
+        },
+      ]
+    },
+    {
+      title: "Наш опыт",
+      link: "#",
+    },
+    {
+      title: "Партнеры",
+      link: "#",
+    },
+    {
+      title: "Медиацентр",
+      link: "#",
+    },
+    {
+      title: "О компании",
+      link: "#",
+    },
+    {
+      title: "Контакты",
+      link: "#",
+    },
+  ]
+
+mixin intro-header(title, breadcrumbs, buttons)
+  .intro-header
+    .intro-header__left
+      if breadcrumbs
+        +breadcrumbs
+      h1.intro-header__title!= title
+      if buttons
+        .intro-header__buttons
+          button.intro-header__button.button.button.button--white
+            span Подобрать решение
+            +icon-multi("arrow-right")
+          a.intro-header__button(href="#")
+            | О компании
+    .intro-header__right
+      nav.intro-header__menu
+        ul.intro-header__menu-list
+          for item in introMenu
+            li.intro-header__menu-item(class=`${item.list ? "js-accordion" : ""}`)
+              .intro-header__menu-item-header(class=`${item.list ? "js-accordion-btn" : ""}`)
+                if item.list
+                  span= item.title
+                else
+                  a(href=item.link)= item.title
+                if item.list
+                  button.intro-header__menu-item-button
+                    +icon-multi("arrow-down")
+              if item.list
+                .intro-header__menu-item-body.js-accordion-content
+                  ul.intro-header__menu-item-list
+                    for i in item.list
+                      li.intro-header__menu-item-list-item
+                        a(href=i.link)= i.title
+      button.intro-header__search
+        | /&nbsp;&nbsp;&nbsp;Поиск&nbsp;&nbsp;&nbsp;/
+      a.intro-header__logo(href=".")
+        +icon-multi("logo")
