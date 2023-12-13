@@ -1,3 +1,33 @@
 .button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  height: 5rem;
+  padding: 1rem 1.2rem 1rem 2rem;
 
+  @extend .text-t3-up;
+
+  svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  &--white {
+    background-color: var(--white-color);
+    color: var(--black-color);
+
+    svg {
+      color: var(--red-color);
+    }
+  }
+
+  &--black {
+    background-color: var(--black-color);
+    color: var(--white-color);
+
+    svg {
+      color: var(--red-color);
+    }
+  }
 }
