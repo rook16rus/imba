@@ -1,0 +1,43 @@
+@font-face {
+  font-weight: 400;
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("TT Norms"),
+    url("../fonts/TTNorms-Regular.woff2") format("woff2"),
+    url("../fonts/TTNorms-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("TT Norms"),
+    url("../fonts/TTNorms-Medium.woff2") format("woff2"),
+    url("../fonts/TTNorms-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("TT Norms"),
+    url("../fonts/TTNorms-Bold.woff2") format("woff2"),
+    url("../fonts/TTNorms-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'IMBA FONT';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("TT Norms"),
+    url("../fonts/IMBAFONT-Regular.woff2") format("woff2"),
+    url("../fonts/IMBAFONT-Regular.woff") format("woff");
+}
