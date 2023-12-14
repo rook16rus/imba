@@ -1,0 +1,6 @@
+mixin section-header(title, link, linkMod)
+  header.section-header&attributes(attributes)
+    h2.section-header__title.section-title= title
+    a.section-header__link.button(class=linkMod href="#")
+      span= link
+      +icon-multi("arrow-right")

@@ -1,0 +1,16 @@
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__title {
+    max-width: 82rem;
+    margin-right: 3rem;
+  }
+
+  &--white {
+    .section-header__title {
+      color: var(--white-color);
+    }
+  }
+}

@@ -1,6 +1,6 @@
-mixin slider-navigation()
+mixin slider-navigation(buttonIconLeft, buttonIconRight)
   .slider-navigation
     button.slider-navigation__button.js-prev-slide(aria-label="Назад")
-      +icon-multi("arrow-down")
+      +icon-multi(`${buttonIconLeft ? buttonIconLeft : "arrow-down"}`)
     button.slider-navigation__button.js-next-slide(aria-label="Вперед")
-      +icon-multi("arrow-down")
+      +icon-multi(`${buttonIconRight ? buttonIconRight : "arrow-down"}`)

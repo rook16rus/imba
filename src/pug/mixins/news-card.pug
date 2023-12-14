@@ -1,0 +1,13 @@
+mixin news-card(title, tag, date, img, text)
+  article.news-card&attributes(attributes)
+    .news-card__content
+      h3.news-card__title= title
+      .news-card__meta
+        a.news-card__tag.tag.tag--normal.tag--black(href="#")= tag
+        time.news-card__date= date
+    if img
+      .news-card__img
+        +pictureLazy(img)
+    else
+      p.news-card__text= text
+

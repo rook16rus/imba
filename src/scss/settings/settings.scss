@@ -196,6 +196,10 @@ img {
 }
 
 .page-section {
+  &--very-large {
+    margin-bottom: 24rem;
+  }
+
   &--large {
     margin-bottom: 18rem;
   }
@@ -278,8 +282,11 @@ a:focus {
 }
 
 .section-title {
-  font: var(--text-t1);
-  color: var(--heading-color);
+  @extend .title-h1;
+
+  span {
+    color: var(--red-color);
+  }
 }
 
 .container {

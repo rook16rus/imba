@@ -19,6 +19,7 @@ import alignHeights from "./modules/alignHeights";
 import inputPlaceholder from "./helpers/inputPlaceholder";
 import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
+import newsSlider from "./helpers/newsSlider";
 
 documenReady(() => {
   window.imba_API = { };
@@ -38,6 +39,8 @@ documenReady(() => {
   inputPlaceholder();
   customSelects();
   accordions();
+
+  newsSlider();
 });
 
 document.fonts.ready.then((res) => {
