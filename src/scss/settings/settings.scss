@@ -196,7 +196,17 @@ img {
 }
 
 .page-section {
-  margin-bottom: 1rem;
+  &--large {
+    margin-bottom: 18rem;
+  }
+
+  &--medium {
+    margin-bottom: 12rem;
+  }
+
+  &--small {
+    margin-bottom: 8rem;
+  }
 }
 
 .page-wrapper {

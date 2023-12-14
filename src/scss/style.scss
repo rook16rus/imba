@@ -37,10 +37,10 @@
   --title-h5: var(--medium) 2.5rem/120% var(--main-ff);
 
   /* Other Typography */
-  --other-1: var(--regular) 35.5rem/100% var(--secondary-ff);
-  --other-2: var(--regular) 32.3rem/100% var(--secondary-ff);
-  --other-3: var(--regular) 17.3rem/100% var(--secondary-ff);
-  --other-4: var(--regular) 11rem/100% var(--secondary-ff);
+  --other-1: var(--regular) 35.5rem/62% var(--secondary-ff);
+  --other-2: var(--regular) 32.3rem/62% var(--secondary-ff);
+  --other-3: var(--regular) 17.3rem/62% var(--secondary-ff);
+  --other-4: var(--regular) 11rem/62% var(--secondary-ff);
 }
 
 @include mq('custom', 'max', 1024) {

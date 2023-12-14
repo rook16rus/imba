@@ -1,0 +1,34 @@
+-
+  const numbers = [
+    {
+      number: "150",
+      text: "> 150 заказчиков нам доверяют",
+    },
+    {
+      number: "350",
+      text: "> 350 полученных сертификаций вендоров у&nbsp;сотрудников тех.департамента",
+      mod: "numbers__card--one-column"
+    },
+    {
+      number: "40",
+      text: "> 40 квалифицированных инженеров и архитекторов",
+    },
+    {
+      number: "20",
+      text: "ТОП-20 поставщиков ИТ в ритейле в рейтинге CNews",
+      mod: "numbers__card--one-column"
+    },
+    {
+      number: "700",
+      text: "> 700  проектов ежегодно",
+      mod: "numbers__card--inner"
+    },
+  ]
+
+section.numbers.page-section--large
+  .container
+    .numbers__wrapper
+      for item in numbers
+        .numbers__card(class=`${item.mod ? item.mod : ''}`)
+          span.numbers__card-number= item.number
+          p.numbers__card-text!= item.text
