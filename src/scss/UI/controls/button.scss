@@ -1,4 +1,7 @@
 .button {
+  position: relative;
+  z-index: 1;
+
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -8,14 +11,47 @@
 
   @extend .text-t3-up;
 
+  &::before, &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: 51%;
+
+    clip-path: polygon(1.5rem 0, 100% 0, 100% 100%, 0 100%, 0 1.5rem);
+
+    transition: clip-path 0.3s ease;
+  }
+
+  &::after {
+    left: auto;
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    &:before, &:after {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+      transition: clip-path 0.3s ease;
+    }
+  }
+
   svg {
     width: 3.2rem;
     height: 3.2rem;
+    margin-top: -0.1rem;
   }
 
   &--white {
-    background-color: var(--white-color);
     color: var(--black-color);
+
+    &::before, &::after {
+      background-color: var(--white-color);
+    }
 
     svg {
       color: var(--red-color);
@@ -23,8 +59,11 @@
   }
 
   &--black {
-    background-color: var(--black-color);
     color: var(--white-color);
+
+    &::before, &::after {
+      background-color: var(--black-color);
+    }
 
     svg {
       color: var(--red-color);

@@ -91,10 +91,6 @@
   pointer-events: auto;
 }
 
-.swiper-button-lock {
-  display: none !important;
-}
-
 .swiper-pagination {
   position: absolute;
   text-align: center;
@@ -270,16 +266,6 @@ button.swiper-pagination-bullet {
 
   font: var(--other-3);
   color: #FF3D00;
-}
-
-button.swiper-button-disabled{
-  opacity: 0;
-  visibility: hidden;
-
-  &:hover {
-    background-color: transparent;
-    color: var(--heading-color);
-  }
 }
 
 .choices {

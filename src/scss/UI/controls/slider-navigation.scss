@@ -1,3 +1,36 @@
 .slider-navigation {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2.2rem;
 
+  &__button {
+    &:first-child {
+      transform: rotate(90deg);
+    }
+
+    &:last-child {
+      transform: rotate(-90deg);
+    }
+
+    svg {
+      width: 3.6rem;
+      height: 3.6rem;
+
+      transition: 0.3s;
+    }
+
+    &.swiper-button-disabled {
+      svg {
+        color: #c5c5c5;
+        cursor: default;
+      }
+
+      &:hover {
+        svg {
+          color: #c5c5c5
+        }
+      }
+    }
+  }
 }

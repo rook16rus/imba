@@ -1,0 +1,7 @@
+<svg width="247" height="50" viewBox="0 0 247 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <clipPath id="buttonClip" clipPathUnits="objectBoundingBox">
+  <path d="M14 0H64V50H0V15L14 0Z" fill="currentColor"/>
+  <rect width="119" height="50" transform="matrix(-1 0 0 1 183 0)" fill="currentColor"/>
+  <path d="M183 0H247V35L234 50H183V0Z" fill="currentColor"/>
+  </clipPath>
+</svg>
