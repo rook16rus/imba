@@ -1,0 +1,35 @@
+section.order.page-section--small
+  .container
+    .order__inner
+      .order__background
+      .order__content
+        h2.order__title
+          | #[span Не нашли нужное решение?] #[br]Оставьте заявку
+        p.order__text
+          | Мы подготовим индивидуальное предложение для вас
+        .order__contacts
+          .order__contacts-block
+            span.order__contants-key Телефон
+            a.order__contacts-value(href="tel:84959693977") +7 (495) 969 39 77
+          .order__contacts-block
+            span.order__contants-key Email
+            a.order__contacts-value(href="mailto:hello@imba-it.ru") hello@imba-it.ru
+      form.order__form(action="#" data-need-validation)
+        .order__inputs
+          .order__input-wrapper.input-wrapper
+            input.order__input.input(type="text" name="orderName" id="orderName" placeholder="Имя" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" required)
+            label.order__label(for="orderName")
+              | Как к вам обращаться
+          .order__input-wrapper.input-wrapper
+            input.order__input.input(type="email" name="orderEmail" id="orderEmail" placeholder="Mail" data-parsley-pattern=`/^\\w+@\\w+\\.\\w+$/` required)
+            label.order__label(for="orderEmail")
+              | Эл. почта
+          .order__input-wrapper.input-wrapper.input-wrapper--textarea
+            textarea.order__textarea.input(name="orderComment" id="orderComment")
+            label.order__label(for="orderComment")
+              | Комментарий
+        p.order__confidence
+          | Нажимая кнопку «Отправить», вы соглашаетесь с условиями нашей #[a(href="#") Политики конфиденциальности]
+        button.button.button--white(type="submit")
+          span Отправить
+          +icon-multi("arrow-right")

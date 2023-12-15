@@ -1,0 +1,51 @@
+.input {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  padding: 2rem 2rem 0;
+
+  border: 1px solid var(--white-color);
+
+  @extend .text-t3-up;
+  color: var(--white-color);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &.is-error {
+    border-color: var(--red-color);
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: -1;
+
+    @extend .text-t5;
+  }
+
+  &--textarea {
+    .input {
+      padding-top: 3.5rem;
+    }
+
+    label {
+      top: 1.5rem;
+    }
+  }
+}
+
+.parsley-errors-list {
+  position: absolute;
+  left: 2rem;
+  top: calc(100% + 0.2rem);
+
+  @extend .text-t5;
+  color: var(--red-color)
+}

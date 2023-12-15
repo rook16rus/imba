@@ -2,9 +2,9 @@
   position: relative;
   z-index: 1;
 
-  display: inline-grid;
-  grid-template-columns: 1fr auto;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   height: 5rem;
   padding: 1rem 1.2rem 1rem 2rem;
