@@ -1,0 +1,5 @@
+mixin partners-list(data)
+  ul.partners-list
+    for item in data
+      li.partners-list__item
+        +picture(item.img)
