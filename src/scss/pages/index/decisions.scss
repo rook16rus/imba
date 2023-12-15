@@ -1,0 +1,95 @@
+.decisions {
+  padding: 5rem 0 4rem;
+
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 13.6rem;
+  }
+
+  &__title {
+    max-width: 81.4rem;
+    margin-right: 3rem;
+  }
+
+  &__img img {
+    width: 27.3rem;
+    height: auto;
+  }
+
+  &__item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+    padding: 4rem 0;
+
+    border-top: 1px solid var(--black-color);
+
+    &:last-child {
+      border-bottom: 1px solid var(--black-color);
+    }
+
+    &::before {
+      content: '';
+
+      grid-column: span 1;
+      width: 1.7rem;
+      height: 1.7rem;
+      margin-top: 0.3rem;
+
+      background-color: var(--black-color);
+    }
+  }
+
+  &__item-title {
+    grid-column: span 5;
+    max-width: 42rem;
+
+    @extend .title-h5;
+  }
+
+  &__item-text {
+    grid-column: span 5;
+    max-width: 51.3rem;
+
+    @extend .text-t2-reg;
+  }
+
+  &__item-link {
+    grid-column: span 1;
+    align-self: center;
+    margin-left: auto;
+
+    svg {
+      width: 1.8rem;
+      height: 3.2rem;
+    }
+
+    &::before {
+      content: '';
+
+      @extend .fill;
+    }
+  }
+
+  &__link {
+    align-self: center;
+    margin-top: 3rem;
+    gap: 3rem;
+
+    font-size: 2.5rem;
+    letter-spacing: -0.1rem;
+  }
+}
