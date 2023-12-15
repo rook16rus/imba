@@ -1,22 +1,22 @@
 -
   const directions = [
     {
-      svg: "directions-1",
+      img: "directions-1.png",
       title: "Информационная безопасность",
       text: "Цифровая трансформация бизнеса с объединением лучших практик"
     },
     {
-      svg: "directions-2",
+      img: "directions-2.png",
       title: "Инженерная инфраструктура",
       text: "Вдохнем новую жизнь в ваши инженерные системы"
     },
     {
-      svg: "directions-3",
+      img: "directions-3.png",
       title: "ИТ-инфраструктура",
       text: "Масштабируем технологический ландшафт с учетом потребностей"
     },
     {
-      svg: "directions-4",
+      img: "directions-4.png",
       title: "Мультимедийные решения",
       text: "Поражающее многообразие пространственных решений"
     },
@@ -25,12 +25,12 @@
 section.directions.page-section--medium
   .container
     +section-header(
-      "Создаем эффективные&nbsp;<span> ИТ-&nbsp;решения</span> для&nbsp;бизнес-задач",
+      "Создаем эффективные&nbsp; <span> ИТ-&nbsp;решения</span> для&nbsp;бизнес-задач",
       "Направления",
       "button--white"
     ).section-header--white
     ul.directions__list
       for item in directions
         li.directions__item
-          +direction-card(item.title, item.svg, item.text)
+          +direction-card(item.title, item.img, item.text)
 

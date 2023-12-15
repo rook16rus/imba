@@ -1,2 +1,7 @@
-mixin direction-card(title, svg, text)
-  article.directions-card&attributes(attributes)
+mixin direction-card(title, img, text)
+  article.direction-card&attributes(attributes)
+    h3.direction-card__title= title
+    .direction-card__img
+      +imgLazy(img)
+    p.direction-card__text= text
+    a.direction-card__link(href="#")
