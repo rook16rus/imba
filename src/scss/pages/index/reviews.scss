@@ -1,0 +1,50 @@
+.reviews {
+  padding: 5rem 0 8rem;
+
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+  .section-header {
+    margin-bottom: 14rem  ;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem 0;
+
+    border-top: 1px solid var(--black-color);
+
+    &::before {
+      content: '“';
+
+      grid-column: span 1;
+
+      font: var(--bold) 10rem/100% "HeliosC", sans-serif;
+      color: var(--red-color);
+    }
+  }
+
+  &__item-text {
+    grid-column: span 7;
+
+    @extend .text-t1;
+  }
+
+  &__item-author {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  &__item-author-company {
+    @extend .text-t2-bold;
+  }
+
+  &__item-author-position {
+    @extend .text-t2-reg;
+  }
+}

@@ -1,0 +1,29 @@
+-
+  const reviews = [
+    {
+      text: "Рекомендуем компанию как ответственного и квалифицированного делового партнера, профессионально выполняющего свои обязательства",
+      company: "IT Company",
+      position: "Начальник центра развития технологический решений"
+    },
+    {
+      text: "Мы с уверенностью готовы рекомендовать ИМБА ИТ в качестве надежного исполнителя с командой высококвалифицированных экспертов",
+      company: "IT Company",
+      position: "Директор управления ИТ группы компаний"
+    },
+    {
+      text: "Рекомендуем ИМБА ИТ как надежного партнера, с основательным подходом, профессионально выполняющего свои обязательства",
+      company: "IT Company",
+      position: "Управляющий Директор по IT"
+    },
+  ]
+
+section.reviews.page-section--small
+  .container
+    +section-header("Клиенты<br>о работе с нами", "Смотреть все", "button--black").section-header--black
+    ul.reviews__list
+      for item in reviews
+        li.reviews__item
+          p.reviews__item-text!= item.text
+          .reviews__item-author
+            span.reviews__item-author-company= item.company
+            span.reviews__item-author-position= item.position

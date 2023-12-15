@@ -41,3 +41,14 @@
     url("../fonts/IMBAFONT-Regular.woff2") format("woff2"),
     url("../fonts/IMBAFONT-Regular.woff") format("woff");
 }
+
+@font-face {
+  font-weight: 700;
+  font-family: 'HeliosC';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("TT Norms"),
+    url("../fonts/HeliosC-Bold.woff2") format("woff2"),
+    url("../fonts/HeliosC-Bold.woff") format("woff");
+}
