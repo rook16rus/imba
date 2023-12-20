@@ -2,4 +2,8 @@ mixin partners-list(data)
   ul.partners-list
     for item in data
       li.partners-list__item
-        +picture(item.img)
+        a.partners-list__item-link(href="#")
+          +picture(item.img)
+    li.partners-list__item
+      a.partners-list__item-link(href="#")
+        | Смотреть все

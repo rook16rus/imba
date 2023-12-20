@@ -1,3 +1,53 @@
 .partners-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0;
 
+  border-left: 1px solid var(--gray-color);
+
+  &__item {
+    position: relative;
+
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26.5rem;
+
+    border-right: 1px solid var(--gray-color);
+    border-bottom: 1px solid var(--gray-color);
+
+    picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      grid-column: span 4;
+      height: 51.9rem;
+
+      border-top: 1px solid var(--gray-color);
+    }
+
+    &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+      grid-column: span 3;
+      height: 39.5rem;
+    }
+  }
+
+  &__item-link {
+    @extend .text-t3-up;
+
+    &::before {
+      content: '';
+
+      @extend .fill;
+    }
+  }
 }
