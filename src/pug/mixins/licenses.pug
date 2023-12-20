@@ -1,0 +1,30 @@
+-
+  const licenses = [
+    {
+      img: "licenses-1.png",
+      text: "Аккредитация Министерства цифрового развития РФ"
+    },
+    {
+      img: "licenses-2.png",
+      text: "ФСБ"
+    },
+    {
+      img: "licenses-3.png",
+      text: "ФСТЭК"
+    },
+    {
+      img: "licenses-4.png",
+      text: "МЧС"
+    }
+  ]
+
+mixin licenses()
+  section.licenses&attributes(attributes)
+    .container
+      h2.licenses__title.section-title
+        | Лицензии
+      ul.licenses__list
+        for item in licenses
+          li.licenses__item
+            +picture(item.img)
+            p.licenses__item-text= item.text

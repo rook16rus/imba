@@ -44,7 +44,7 @@ documenReady(() => {
 });
 
 document.fonts.ready.then((res) => {
-
+  alignHeights(".licenses", ".licenses__item img")
 })
 
 window.addEventListener('load', function () {
