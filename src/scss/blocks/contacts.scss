@@ -1,0 +1,33 @@
+.contacts {
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+
+  &__button {
+    margin-right: 3rem;
+
+    &.is-active {
+      color: var(--black-color);
+
+      &::before, &::after {
+        background-color: var(--white-color);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  &__map {
+    height: 50.9rem;
+
+    background-color: var(--gray-color);
+    border: 1px solid #161616;
+  }
+}
