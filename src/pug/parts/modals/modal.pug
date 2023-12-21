@@ -1,5 +1,15 @@
-.modal__container(data-target="demo").modal-demo
+.modal__container(data-target="partner").modal-partner
   .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
       span
+    .modal-partner__content
+      span.modal-partner__tag.tag.tag--normal.tag--red
+        | bronze
+      h3.modal-partner__title
+        | usergate
+      p.modal-partner__text
+        | Подберем продукты с возможностью бесшовной интеграции с текущей инфраструктурой, учитывая риски и специфику компании.
+    .modal-partner__img
+      +imgLazy("modal-partner-1.png")
+

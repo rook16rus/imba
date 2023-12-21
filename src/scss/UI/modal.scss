@@ -23,10 +23,10 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
-    max-width: 50rem;
+    max-width: 96.9rem;
     height: auto;
-    background-color: #fff;
-    border-radius: 1.6rem;
+    background-color: var(--white-color);
+    color: var(--black-color);
     transform: translate(-50%, -50%);
 
     &.modal-open {
@@ -37,20 +37,20 @@
 
   &__content {
     position: relative;
-    padding: 5rem;
+    padding: 2rem;
   }
 
   &__close-btn {
     position: absolute;
-    top: 1.6rem;
-    right: 1.6rem;
+    top: 0;
+    left: calc(100% + 2rem);
     z-index: 1;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5.9rem;
-    height: 5.9rem;
+    width: 2.5rem;
+    height: 2.5rem;
 
     background-color: transparent;
     border: 1px solid var(--stroke-color-1);
@@ -76,9 +76,9 @@
       left: 50%;
 
       display: block;
-      width: 2.2rem;
-      height: 0.1rem;
-      background-color: var(--heading-color);
+      width: 3.5rem;
+      height: 2px;
+      background-color: var(--red-color);
 
       transform: translate(-50%, -50%);
       transition: background-color var(--transition);
@@ -91,6 +91,60 @@
       &:nth-child(2) {
         transform: translate(-50%, -50%) rotate(45deg);
       }
+    }
+  }
+}
+
+.modal-partner {
+  .modal__content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+  }
+
+  &__tag {
+    margin-bottom: 7rem;
+  }
+
+  &__title {
+    margin-bottom: 7.7rem;
+
+    @extend .title-h1;
+    line-height: 80%;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    max-width: 37.5rem;
+    margin-left: 7.5rem;
+
+    @extend .text-t2-reg;
+
+    &::before {
+      content: '';
+
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-top: 0.7rem;
+
+      background-color: var(--black-color);
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40.6rem;
+    height: 40.6rem;
+
+    background-color: var(--black-color);
+
+    img {
+      max-width: 80%;
+      max-height: 80%;
     }
   }
 }

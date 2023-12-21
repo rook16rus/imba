@@ -43,6 +43,7 @@
   }
 
   &__item-link {
+    position: static;
     @extend .text-t3-up;
 
     &::before {

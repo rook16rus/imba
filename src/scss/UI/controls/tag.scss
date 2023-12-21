@@ -1,16 +1,20 @@
 .tag {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   border: 1px solid transparent;
 
   &--normal {
+    min-height: 3.4rem;
     padding: 0.8rem 1rem;
+
     @extend .text-t4;
   }
 
   &--small {
+    min-height: 3rem;
     padding: 0.8rem;
+
     @extend .text-t5;
   }
 

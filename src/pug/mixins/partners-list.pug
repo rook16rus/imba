@@ -2,7 +2,7 @@ mixin partners-list(data)
   ul.partners-list
     for item in data
       li.partners-list__item
-        a.partners-list__item-link(href="#")
+        button.partners-list__item-link(data-path="partner")
           +picture(item.img)
     li.partners-list__item
       a.partners-list__item-link(href="#")
