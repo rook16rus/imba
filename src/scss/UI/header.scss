@@ -13,6 +13,7 @@
 
   transition: opacity 0.3s, visibility 0.3s;
 
+
   &.is-visible {
     opacity: 1;
     visibility: visible;
@@ -23,6 +24,11 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 3rem;
     align-items: flex-start;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
   }
 
   &__left {
@@ -30,23 +36,32 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__menu {
     display: flex;
+    flex-wrap: wrap;
     margin-right: -1.5rem;
+    margin-bottom: -1.5rem;
 
     &:last-child {
       margin-right: -1rem;
+      margin-bottom: -1rem;
 
       .header__menu-item {
         margin-right: 1rem;
+        margin-bottom: 1rem;
       }
     }
   }
 
   &__menu-item {
     margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
 
     @extend .text-t3-up;
     font-weight: 400;
@@ -73,6 +88,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include mq('custom', 'max', 1024) {
+      grid-column: span 1;
+    }
   }
 
   &__info {
@@ -82,17 +101,79 @@
 
     @extend .text-t3-up;
     font-weight: 400;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__search {
     @extend .text-t3-up;
     font-weight: 400;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__logo {
+    @include mq('custom', 'max', 1024) {
+      order: -1;
+    }
+
     svg {
       width: 10rem;
       height: 6.5rem;
+
+      @include mq('custom', 'max', 1024) {
+        width: 8.2rem;
+        height: 5.2rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        width: 6.6rem;
+        height: 4.2rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        width: 5rem;
+        height: 3.2rem;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include mq('custom', 'max', 1024) {
+      position: relative;
+
+      display: block;
+      width: 5.5rem;
+      height: 1.6rem;
+
+      @include mq('custom', 'max', 640) {
+        width: 3.5rem;
+        height: 1.2rem;
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+
+        width: 100%;
+        height: 0.4rem;
+
+        background-color: var(--white-color);
+
+        &:first-child {
+          top: 0;
+        }
+
+        &:last-child {
+          bottom: 0;
+        }
+      }
     }
   }
 }

@@ -10,11 +10,14 @@ export default function header() {
   //   header.classList.toggle('active');
   // })
 
-  window.addEventListener('scroll', () => {
+  checkScroll();
+  window.addEventListener('scroll', checkScroll);
+
+  function checkScroll() {
     if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top + 300) {
       header.classList.add('is-visible');
     } else {
       header.classList.remove('is-visible');
     }
-  });
+  }
 }
