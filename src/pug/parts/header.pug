@@ -1,0 +1,78 @@
+-
+  const headerTopMenu = [
+    {
+      text: "Каталог решений",
+      link: "#",
+      mod: true
+    },
+    {
+      text: "Наш опыт",
+      link: "#",
+    },
+    {
+      text: "Партнеры",
+      link: "#",
+    },
+    {
+      text: "Медиацентр",
+      link: "#",
+    },
+    {
+      text: "О компании",
+      link: "#",
+    },
+    {
+      text: "Контакты",
+      link: "#",
+    },
+  ]
+
+-
+  const headerBottomMenu = [
+    {
+      text: "Информационная безопасность",
+      link: "#",
+    },
+    {
+      text: "ИТ-инфраструктура",
+      link: "#",
+    },
+    {
+      text: "Мультимедийные решения",
+      link: "#",
+    },
+    {
+      text: "Инженерная инфраструктура",
+      link: "#",
+    }
+  ]
+
+header.header
+  .container
+    nav.header__nav
+      .header__left
+        ul.header__menu
+          for item in headerTopMenu
+            li.header__menu-item(class=`${item.mod ? 'header__menu-item--red' : ''}`)
+              a.header__menu-link(href=item.link)
+                span= item.text
+                if item.mod
+                  +icon-multi('menu-arrow')
+
+        ul.header__menu
+          for item in headerBottomMenu
+            li.header__menu-item(class=`${item.mod ? 'header__menu-item--red' : ''}`)
+              a.header__menu-link(href=item.link)
+                span= item.text
+                if item.mod
+                  +icon-multi('menu-arrow')
+      .header__right
+        .header__info
+          a.header__phone(href="tel:+7 (495) 969 39 77")
+            | +7 (495) 969 39 77
+          a.header__mail(href="mailto:hello@imba-it.ru")
+            | hello@imba-it.ru
+        button.header__search
+          | /&nbsp;&nbsp;&nbsp;Поиск&nbsp;&nbsp;&nbsp;/
+        a.header__logo(href="/")
+          +icon-multi('logo')
