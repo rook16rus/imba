@@ -4,6 +4,10 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 5rem 3rem;
     align-items: flex-start;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__card {
@@ -21,8 +25,8 @@
       position: relative;
 
       .numbers__card-text {
-        position: absolute;
-        right: 11rem;
+        position: relative;
+        right: 21rem;
         bottom: 1.5rem;
 
         width: 14rem;
@@ -33,6 +37,10 @@
 
     &:nth-child(1) {
       grid-column: span 8;
+
+      @include mq('custom', 'max', 1024) {
+        grid-column: span 1;
+      }
 
       .numbers__card-number {
         margin-right: 2.7rem;
@@ -47,6 +55,10 @@
 
     &:nth-child(2) {
       grid-column: span 4;
+
+      @include mq('custom', 'max', 1024) {
+        grid-column: span 1;
+      }
 
       .numbers__card-number {
         margin-bottom: 3rem;
@@ -64,6 +76,10 @@
       grid-column: 3 / 9;
       margin-top: 7rem;
 
+      @include mq('custom', 'max', 1024) {
+        grid-column: span 1;
+      }
+
       .numbers__card-number {
         margin-right: 1.5rem;
         font: var(--other-4);
@@ -78,6 +94,10 @@
       grid-column: span 4;
       margin-top: 7rem;
 
+      @include mq('custom', 'max', 1024) {
+        grid-column: span 1;
+      }
+
       .numbers__card-number {
         margin-bottom: 2rem;
         font: var(--other-3);
@@ -90,6 +110,10 @@
 
     &:nth-child(5) {
       grid-column: 3 / 9;
+
+      @include mq('custom', 'max', 1024) {
+        grid-column: span 1;
+      }
 
       .numbers__card-number {
         font: var(--other-1);
