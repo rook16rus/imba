@@ -10,6 +10,11 @@
 
   @extend .text-t3-up;
 
+  @include mq('custom', 'max', 640) {
+    height: 4.2rem;
+    font: var(--text-t4);
+  }
+
   &::before, &::after {
     content: '';
 

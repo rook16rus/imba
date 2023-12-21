@@ -14,10 +14,22 @@ export default function header() {
   window.addEventListener('scroll', checkScroll);
 
   function checkScroll() {
-    if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top + 300) {
+    let topOffset = 300;
+
+    if (window.innerWidth <= 1024) {
+      topOffset = 0;
+    }
+
+    if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top + topOffset) {
       header.classList.add('is-visible');
     } else {
       header.classList.remove('is-visible');
     }
+  }
+
+  if (window.innerWidth <= 1024) {
+      const introHeader = document.querySelector('.intro-header');
+
+      introHeader.style.setProperty('--header-height', header.clientHeight + 'px')
   }
 }

@@ -22,6 +22,7 @@ import accordions from "./helpers/accordions";
 import newsSlider from "./helpers/newsSlider";
 import contactsMap from "./helpers/contactsMap";
 import header from "./helpers/header";
+import introSlider from "./helpers/introSlider";
 
 documenReady(() => {
   window.imba_API = { };
@@ -42,6 +43,7 @@ documenReady(() => {
   customSelects();
   accordions();
 
+  introSlider();
   newsSlider();
   contactsMap();
   header();

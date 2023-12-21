@@ -3,8 +3,32 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 3rem;
 
+  @include mq('custom', 'max', 1024) {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    &::before {
+      content: '';
+
+      display: block;
+      height: calc(var(--header-height) + 2.6rem);
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: contents;
+    }
+  }
+
   &__left {
     grid-column: span 7;
+
+    @include mq('custom', 'max', 1024) {
+      grid-column: 1;
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: contents;
+    }
   }
 
   &__title {
@@ -20,14 +44,41 @@
   &__buttons {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 9rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 3rem;
+      order: 1;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 2rem;
+      justify-content: space-between;
+    }
   }
 
   &__button {
     @extend .text-t3-up;
 
-    &:last-child {
-      margin-left: 4rem;
+    @include mq('custom', 'max', 640) {
+      font: var(--text-t4);
+    }
+
+    &:first-child {
+      margin-right: 4rem;
+
+      @include mq('custom', 'max', 640) {
+        margin-right: 2rem;
+      }
+
+      @include mq('custom', 'max', 360) {
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -36,6 +87,10 @@
     align-items: flex-start;
     justify-content: space-between;
     grid-column: span 5;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__menu-list {

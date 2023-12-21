@@ -9,6 +9,16 @@
   background-size: cover;
   background-position: center;
 
+  @include mq('custom', 'max', 1024) {
+    padding-top: 0;
+    min-height: auto;
+    height: auto;
+  }
+
+  @include mq('custom', 'max', 640) {
+    background-position: -37rem center;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -20,16 +30,45 @@
     gap: 3rem;
     align-items: flex-end;
     margin-top: auto;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 6rem;
+    }
   }
 
   &__bottom-left {
     grid-column: span 7;
+
+    @include mq('custom', 'max', 1024) {
+      grid-column: span 1;
+      margin-bottom: 4rem;
+    }
   }
 
   &__content-photo {
     width: 10rem;
     height: 10rem;
     margin-bottom: 4rem;
+
+    @include mq('custom', 'max', 1024) {
+      width: 8.6rem;
+      height: 8.6rem;
+      margin-bottom: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 7.3rem;
+      height: 7.3rem;
+      margin-bottom: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 5.9rem;
+      height: 5.9rem;
+      margin-bottom: 2rem;
+    }
 
     svg, img {
       width: 100%;
@@ -42,6 +81,14 @@
     max-width: 51.3rem;
 
     @extend .text-t2-reg;
+
+    @include mq('custom', 'max', 1024) {
+      max-width: 80rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      font: var(--text-t3);
+    }
   }
 
   &__content-item {
@@ -55,6 +102,12 @@
       margin-bottom: 0.1rem;
 
       background-color: var(--white-color);
+
+      @include mq('custom', 'max', 640) {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-bottom: 0.2rem;
+      }
     }
   }
 
@@ -67,12 +120,40 @@
     flex-direction: column;
     align-items: flex-end;
 
+    @include mq('custom', 'max', 1024) {
+      overflow: visible;
+    }
+
     .slider-navigation {
       margin-bottom: 3.2rem;
     }
 
     .swiper-wrapper {
       height: 35rem;
+
+      @include mq('custom', 'max', 1024) {
+        height: auto;
+      }
+    }
+  }
+
+  &__slide {
+    @include mq('custom', 'max', 1024) {
+      width: 54rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 41rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 29rem;
+    }
+  }
+
+  .slider-navigation {
+    @include mq('custom', 'max', 1024) {
+      display: none;
     }
   }
 }

@@ -51,7 +51,7 @@ mixin intro-header(title, breadcrumbs, buttons)
   .intro-header
     .intro-header__left
       if breadcrumbs
-        +breadcrumbs
+        +breadcrumbs()
       h1.intro-header__title!= title
       if buttons
         .intro-header__buttons

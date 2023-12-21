@@ -24,7 +24,7 @@ section.intro.page-section--small(style="background-image: url('./assets/images/
           for item in introList
             li.intro__content-item= item
       .intro__bottom-right
-        .intro__slider.swiper.js-init-slider(data-slides="1" )
+        .intro__slider.swiper
           +slider-navigation()
           .swiper-wrapper
             for item in introSlider

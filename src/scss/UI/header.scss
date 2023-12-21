@@ -11,12 +11,25 @@
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
 
+  @include mq('custom', 'max', 1024) {
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+  }
+
+  @include mq('custom', 'max', 768) {
+    padding: 1.4rem 0;
+  }
 
   &.is-visible {
     opacity: 1;
     visibility: visible;
+
+    @include mq('custom', 'max', 1024) {
+      background-color: var(--black-color);
+    }
   }
 
   &__nav {
@@ -126,18 +139,18 @@
       height: 6.5rem;
 
       @include mq('custom', 'max', 1024) {
-        width: 8.2rem;
-        height: 5.2rem;
+        width: 9.1rem;
+        height: 6rem;
       }
 
       @include mq('custom', 'max', 768) {
-        width: 6.6rem;
-        height: 4.2rem;
+        width: 8.4rem;
+        height: 5.5rem;
       }
 
       @include mq('custom', 'max', 640) {
-        width: 5rem;
-        height: 3.2rem;
+        width: 7.7rem;
+        height: 5rem;
       }
     }
   }
