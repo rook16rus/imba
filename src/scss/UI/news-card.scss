@@ -3,16 +3,17 @@
   flex-direction: column;
   padding: 3rem;
   height: 100%;
-
   background-color: var(--white-color);
   color: var(--black-color);
+
+  @include mq('custom', 'max', 640) {
+    padding: 2rem;
+  }
 
   &__content {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     margin-bottom: auto;
-    max-height: 21.4rem;
   }
 
   &__title {
@@ -20,6 +21,10 @@
 
     @extend .title-h5;
     @include maxSizeText(5);
+
+    @include mq('custom', 'max', 640) {
+      font: var(--title-h4);
+    }
   }
 
   &__meta {
@@ -31,12 +36,25 @@
 
   &__date {
     font: var(--text-t3);
+
+    @include mq('custom', 'max', 640) {
+      font: var(--text-t4);
+    }
   }
 
   &__img {
     width: 100%;
     height: 19.7rem;
     margin-top: 4rem;
+
+    @include mq('custom', 'max', 1024) {
+      height: 17rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 12rem;
+      margin-top: 3rem;
+    }
 
     img {
       width: 100%;
@@ -46,13 +64,14 @@
   }
 
   &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 1.6rem;
     margin-top: 4rem;
 
     @extend .text-t2-reg;
     @include maxSizeText(7);
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 3rem;
+      font: var(--text-t3);
+    }
   }
 }

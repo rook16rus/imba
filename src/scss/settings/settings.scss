@@ -198,10 +198,34 @@ img {
 .page-section {
   &--very-large {
     margin-bottom: 24rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 18rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 13rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 8rem;
+    }
   }
 
   &--large {
     margin-bottom: 18rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 14rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 11rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 8rem;
+    }
   }
 
   &--medium {
@@ -299,6 +323,8 @@ a:focus {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
   margin: 0 auto;

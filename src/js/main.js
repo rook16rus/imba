@@ -50,7 +50,8 @@ documenReady(() => {
 });
 
 document.fonts.ready.then((res) => {
-  alignHeights(".licenses", ".licenses__item img")
+  alignHeights(".licenses", ".licenses__item img");
+  alignHeights(".news__slider", ".news-card__content");
 })
 
 window.addEventListener('load', function () {
@@ -62,5 +63,5 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('resize', () => {
-
+  alignHeights(".news__slider", ".news-card__content");
 })

@@ -3,9 +3,23 @@
     margin-bottom: 12rem;
   }
 
+  .section-header__title {
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 6.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 4rem;
+    }
+  }
+
   &__slider-container {
     display: flex;
     align-items: flex-end;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4.6rem;
+    }
   }
 
   &__navigation {
@@ -14,6 +28,10 @@
     flex-shrink: 0;
     width: 38rem;
     margin-right: 3rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   .swiper-pagination {
@@ -58,10 +76,31 @@
 
   &__slider {
     min-width: 0;
-    height: 51.4rem;
+    min-height: 51.4rem;
+
+    @include mq('custom', 'max', 1024) {
+      min-height: 45rem;
+      overflow: visible;
+    }
+
+    @include mq('custom', 'max', 768) {
+      min-height: 40rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      min-height: 35.7rem;
+    }
   }
 
   &__slide {
     height: auto;
+
+    @include mq('custom', 'max', 1024) {
+      width: 37.7rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 26.1rem;
+    }
   }
 }

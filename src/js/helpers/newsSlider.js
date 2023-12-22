@@ -8,8 +8,8 @@ export default function newsSlider() {
   sections.forEach(section => {
     const slider = section.querySelector('.news__slider');
     const swiper = new Swiper(slider, {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: "auto",
+      spaceBetween: 15,
       navigation: {
         nextEl: section.querySelector('.js-next-slide'),
         prevEl: section.querySelector('.js-prev-slide'),
@@ -27,6 +27,15 @@ export default function newsSlider() {
           return String(number).length > 1 ? number : '0' + number;
         }
       },
+      breakpoints: {
+        768: {
+          spaceBetween: 20
+        },
+        1025: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
     })
   })
 }

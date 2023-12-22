@@ -3,9 +3,19 @@
   align-items: flex-start;
   justify-content: space-between;
 
+  @include mq('custom', 'max', 768) {
+    display: contents;
+  }
+
   &__title {
     max-width: 82rem;
     margin-right: 3rem;
+  }
+
+  &__link {
+    @include mq('custom', 'max', 768) {
+      order: 1;
+    }
   }
 
   &--white {

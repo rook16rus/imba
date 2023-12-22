@@ -37,9 +37,11 @@
     transform: rotate(180deg);
   }
 
-  &:hover {
-    &:before, &:after {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  @include mq('custom', 'min', 1025) {
+    &:hover {
+      &:before, &:after {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+      }
     }
   }
 
