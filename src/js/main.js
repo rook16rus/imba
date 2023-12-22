@@ -23,6 +23,7 @@ import newsSlider from "./helpers/newsSlider";
 import contactsMap from "./helpers/contactsMap";
 import header from "./helpers/header";
 import introSlider from "./helpers/introSlider";
+import projectsSlider from "./helpers/projectsSlider";
 
 documenReady(() => {
   window.imba_API = { };
@@ -47,6 +48,7 @@ documenReady(() => {
   newsSlider();
   contactsMap();
   header();
+  projectsSlider();
 });
 
 document.fonts.ready.then((res) => {

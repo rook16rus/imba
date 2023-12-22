@@ -39,14 +39,15 @@
 
 section.projects.page-section--medium
   .container
-    +section-header("Наши проекты", "Смотреть все", "button--white").section-header--white
-    .projects__slider.swiper
-      .swiper-wrapper
-        for item in projects
-          .projects__slide.swiper-slide
-            h3.projects__slide-title= item.title
-            .projects__slide-wrapper
-              span.projects__slide-tag.tag.tag--black.tag--normal= item.tag
-              ul.projects__slide-list
-                for i in item.list
-                  li.projects__slide-item= i
+    +section-header("Наши <br> проекты", "Смотреть все", "button--white").section-header--white
+    .projects__slider-container
+      .projects__slider.swiper
+        .swiper-wrapper
+          for item in projects
+            .projects__slide.swiper-slide
+              h3.projects__slide-title= item.title
+              .projects__slide-wrapper
+                span.projects__slide-tag.tag.tag--black.tag--normal= item.tag
+                ul.projects__slide-list
+                  for i in item.list
+                    li.projects__slide-item= i

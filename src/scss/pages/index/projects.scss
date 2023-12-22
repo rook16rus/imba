@@ -3,18 +3,41 @@
     margin-bottom: 9rem;
 
     &__title {
-      max-width: 45rem;
+      @include mq('custom', 'max', 768) {
+        margin-bottom: 7rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &__slider-container {
+    min-width: 0;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
     }
   }
 
   &__slider {
+    @include mq('custom', 'max', 890) {
+      overflow: visible;
+    }
+
     .swiper-wrapper {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 3rem;
 
-      @include mq('custom', 'min', 1025) {
+      @include mq('custom', 'min', 891) {
         transform: none !important;
+      }
+
+      @include mq('custom', 'max', 890) {
+        display: flex;
+        gap: 0;
       }
     }
   }
@@ -27,11 +50,30 @@
 
     background-color: var(--white-color);
     color: var(--black-color);
+
+    @include mq('custom', 'max', 890) {
+      min-height: auto;
+      width: 80rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 60rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 32.2rem;
+      padding: 2rem;
+    }
   }
 
   &__slide-title {
     margin-bottom: 2.6rem;
     @extend .text-t1;
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+      font: var(--title-h3);
+    }
   }
 
   &__slide-wrapper {
@@ -40,12 +82,31 @@
     align-items: flex-start;
     gap: 3rem;
     margin-top: auto;
+
+    @include mq('custom', 'max', 768) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__slide-tag {
+    @include mq('custom', 'max', 640) {
+      font: var(--text-t3);
+    }
   }
 
   &__slide-list {
     max-width: 45.8rem;
     margin-right: 1rem;
     margin-left: auto;
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 2rem;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+    }
   }
 
   &__slide-item {
@@ -54,6 +115,10 @@
     gap: 1.6rem;
 
     @extend .text-t2-reg;
+
+    @include mq('custom', 'max', 640) {
+      font: var(--text-t3);
+    }
 
     &::before {
       content: '';
@@ -64,6 +129,10 @@
 
       border-radius: 50%;
       background-color: var(--black-color);
+
+      @include mq('custom', 'max', 640) {
+        margin-top: 0.7rem;
+      }
     }
   }
 }
