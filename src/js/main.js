@@ -65,5 +65,6 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('resize', () => {
+  alignHeights(".licenses", ".licenses__item img");
   alignHeights(".news__slider", ".news-card__content");
 })
