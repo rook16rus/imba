@@ -10,4 +10,6 @@ mixin news-card(title, tag, date, img, text)
         +pictureLazy(img)
     else
       p.news-card__text= text
+    a.news-card__link(href="#")
+      | Перейти
 

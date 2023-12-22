@@ -230,6 +230,18 @@ img {
 
   &--medium {
     margin-bottom: 12rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 10rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 9rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 8rem;
+    }
   }
 
   &--small {

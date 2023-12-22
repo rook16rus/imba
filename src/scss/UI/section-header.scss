@@ -10,6 +10,10 @@
   &__title {
     max-width: 82rem;
     margin-right: 3rem;
+
+    @include mq('custom', 'max', 768) {
+      margin-right: 0;
+    }
   }
 
   &__link {

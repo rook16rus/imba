@@ -3,15 +3,45 @@
     margin-bottom: 12rem;
   }
 
+  .section-header__title {
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 6.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 4rem;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: 1fr;
+      margin-bottom: 1.2rem;
+      gap: 1.2rem;
+    }
   }
 
   &__item {
     &:first-child {
       grid-column: 2 / 3;
+
+      @include mq('custom', 'max', 768) {
+        grid-column: 1 / 2;
+      }
     }
   }
 }

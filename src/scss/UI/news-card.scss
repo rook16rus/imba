@@ -74,4 +74,9 @@
       font: var(--text-t3);
     }
   }
+
+  &__link {
+    @extend .fill;
+    opacity: 0;
+  }
 }
