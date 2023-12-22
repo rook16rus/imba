@@ -16,6 +16,18 @@
   &.is-error {
     border-color: var(--red-color);
   }
+
+  @include mq('custom', 'max', 1024) {
+    height: 6.6rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    height: 6.2rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    height: 5.7rem;
+  }
 }
 
 .input-wrapper {
@@ -28,15 +40,30 @@
     z-index: -1;
 
     @extend .text-t5;
+
+    @include mq('custom', 'max', 768) {
+      top: 1.4rem;
+
+      font: var(--text-t4);
+      font-weight: 400;
+    }
   }
 
   &--textarea {
     .input {
       padding-top: 3.5rem;
+
+      @include mq('custom', 'max', 768) {
+        padding-top: 3.2rem;
+      }
     }
 
     label {
       top: 1.5rem;
+
+      @include mq('custom', 'max', 768) {
+        top: 1.4rem;
+      }
     }
   }
 }
