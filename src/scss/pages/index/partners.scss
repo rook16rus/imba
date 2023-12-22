@@ -1,5 +1,21 @@
 .partners {
   .section-header {
     margin-bottom: 8rem;
+
+    &__title {
+      @include mq('custom', 'max', 768) {
+        margin-bottom: 5rem;
+      }
+
+      @include mq('custom', 'max', 640) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  .partners-list {
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
   }
 }

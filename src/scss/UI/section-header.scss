@@ -17,6 +17,8 @@
   }
 
   &__link {
+    flex-shrink: 0;
+
     @include mq('custom', 'max', 768) {
       order: 1;
     }

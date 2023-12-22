@@ -17,6 +17,25 @@
     border-right: 1px solid var(--gray-color);
     border-bottom: 1px solid var(--gray-color);
 
+    @include mq('custom', 'max', 1024) {
+      height: 21rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      height: 16rem;
+      grid-column: span 4;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 11.2rem;
+    }
+
+    &--link {
+      @include mq('custom', 'max', 768) {
+        display: none;
+      }
+    }
+
     picture {
       display: flex;
       justify-content: center;
@@ -34,11 +53,54 @@
       height: 51.9rem;
 
       border-top: 1px solid var(--gray-color);
+
+      @include mq('custom', 'max', 1024) {
+        height: 40rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        height: 30rem;
+        grid-column: 1 / -1;
+      }
+
+      @include mq('custom', 'max', 640) {
+        height: 20rem;
+      }
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      @include mq('custom', 'max', 768) {
+        height: 21rem;
+        grid-column: span 6;
+      }
+
+      @include mq('custom', 'max', 640) {
+        height: 11.8rem;
+      }
     }
 
     &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
       grid-column: span 3;
       height: 39.5rem;
+
+      @include mq('custom', 'max', 1024) {
+        height: 30rem;
+      }
+
+      @include mq('custom', 'max', 768) {
+        height: 16rem;
+        grid-column: span 4;
+      }
+
+      @include mq('custom', 'max', 640) {
+        height: 11.2rem;
+      }
+    }
+
+    &:nth-child(n + 7) {
+      @include mq('custom', 'max', 768) {
+        display: none;
+      }
     }
   }
 
