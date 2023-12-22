@@ -8,12 +8,22 @@
     @include mq('custom', 'max', 1024) {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    @include mq('custom', 'max', 768) {
+      gap: 2rem 1rem;
+    }
   }
 
   &__card {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: flex-end;
+
+    @include mq('custom', 'max', 374) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
 
     &--one-column {
       display: flex;
@@ -32,6 +42,22 @@
         width: 14rem;
 
         color: var(--black-color);
+
+        @include mq('custom', 'max', 1024) {
+          right: 14rem;
+        }
+
+        @include mq('custom', 'max', 768) {
+          right: 9.7rem;
+          width: 11rem;
+        }
+
+        @include mq('custom', 'max', 374) {
+          position: static;
+
+          width: auto;
+          color: var(--white-color);
+        }
       }
     }
 
@@ -42,9 +68,18 @@
         grid-column: span 1;
       }
 
+      @include mq('custom', 'max', 820) {
+        grid-column: span 2;
+        align-items: flex-start;
+      }
+
       .numbers__card-number {
         margin-right: 2.7rem;
         font: var(--other-2);
+
+        @include mq('custom', 'max', 768) {
+          margin-right: 0.3rem;
+        }
       }
 
       .numbers__card-text {
@@ -60,15 +95,35 @@
         grid-column: span 1;
       }
 
+      @include mq('custom', 'max', 820) {
+        grid-column: span 2;
+        align-items: flex-end;
+        margin-left: auto;
+        margin-top: 1rem;
+      }
+
       .numbers__card-number {
         margin-bottom: 3rem;
 
         font: var(--other-3);
         color: var(--red-color);
+
+        @include mq('custom', 'max', 768) {
+          margin-bottom: 2rem;
+        }
+
+        @include mq('custom', 'max', 374) {
+          margin-bottom: 0;
+          font-size: 13rem;
+        }
       }
 
       .numbers__card-text {
         max-width: 32rem;
+
+        @include mq('custom', 'max', 768) {
+          max-width: 16rem;
+        }
       }
     }
 
@@ -80,13 +135,35 @@
         grid-column: span 1;
       }
 
+      @include mq('custom', 'max', 820) {
+        margin-top: 0;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      @include mq('custom', 'max', 374) {
+        grid-column: span 2;
+      }
+
       .numbers__card-number {
         margin-right: 1.5rem;
         font: var(--other-4);
+
+        @include mq('custom', 'max', 768) {
+          font-size: 11rem;
+        }
       }
 
       .numbers__card-text {
         max-width: 35rem;
+
+        @include mq('custom', 'max', 768) {
+          word-break: break-all;
+        }
+
+        @include mq('custom', 'max', 374) {
+          max-width: 16rem;
+        }
       }
     }
 
@@ -98,13 +175,35 @@
         grid-column: span 1;
       }
 
+      @include mq('custom', 'max', 820) {
+        margin-top: 9rem;
+      }
+
+      @include mq('custom', 'max', 374) {
+        grid-column: span 2;
+        margin-top: 0;
+        align-items: flex-end;
+      }
+
       .numbers__card-number {
         margin-bottom: 2rem;
         font: var(--other-3);
+
+        @include mq('custom', 'max', 768) {
+          font-size: 11rem;
+        }
+
+        @include mq('custom', 'max', 374) {
+          margin-bottom: 0;
+        }
       }
 
       .numbers__card-text {
         max-width: 35rem;
+
+        @include mq('custom', 'max', 374) {
+          max-width: 16rem;
+        }
       }
     }
 
@@ -115,13 +214,32 @@
         grid-column: span 1;
       }
 
+      @include mq('custom', 'max', 820) {
+        grid-column: span 2;
+      }
+
       .numbers__card-number {
         font: var(--other-1);
+
+        @include mq('custom', 'max', 374) {
+          font-size: 13rem;
+        }
       }
     }
   }
 
   &__card-text {
     @extend .text-t2-up;
+
+    @include mq('custom', 'max', 768) {
+      font: var(--text-t3);
+      font-size: 1.4rem;
+    }
+
+    span {
+      @include mq('custom', 'max', 768) {
+        display: none;
+      }
+    }
   }
 }
