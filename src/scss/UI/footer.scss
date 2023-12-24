@@ -1,11 +1,39 @@
 .footer {
   padding-bottom: 4rem;
 
+  @include mq('custom', 'max', 1024) {
+    padding-bottom: 3.2rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    padding-bottom: 2.3rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding-bottom: 1.4rem;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 3rem;
     margin-bottom: 8rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 7.2rem;
+      gap: 2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      gap: 6rem;
+      margin-bottom: 6.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__column {
@@ -13,11 +41,55 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 6rem;
+
+    @include mq('custom', 'max', 1024) {
+      grid-column: span 1;
+      gap: 4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 2.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.6rem;
+    }
+
+    &:nth-child(1), &:nth-child(2) {
+      @include mq('custom', 'max', 768) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &:nth-child(2) {
+      .footer__block:nth-child(1) {
+        order: 1;
+      }
+    }
+
+    &:nth-child(3) {
+      @include mq('custom', 'max', 768) {
+        gap: 3rem;
+      }
+    }
   }
 
   &__subtitle {
     margin-bottom: 4rem;
     font: var(--text-t3);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.6rem;
+      font: var(--text-t4);
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__address, &__phone, &__email {
@@ -26,19 +98,51 @@
 
   &__address {
     margin-bottom: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      font: var(--text-t4);
+      font-weight: 500;
+    }
+  }
+
+  &__phone {
+    @include mq('custom', 'max', 768) {
+      font: var(--text-t2);
+      font-weight: 500;
+    }
+  }
+
+  &__email {
+    @include mq('custom', 'max', 768) {
+      font-size: 1.5rem;
+      text-decoration: underline;
+    }
   }
 
   &__socials {
     display: flex;
     margin-right: -1.3rem;
+
+    @include mq('custom', 'max', 640) {
+      margin-right: -1.8rem;
+    }
   }
 
   &__social {
     margin-right: 1.3rem;
 
+    @include mq('custom', 'max', 640) {
+      margin-right: 1.8rem;
+    }
+
     svg {
       width: 6rem;
       height: 6rem;
+
+      @include mq('custom', 'max', 640) {
+        width: 5rem;
+        height: 5rem;
+      }
     }
   }
 
@@ -48,6 +152,10 @@
     gap: 2rem;
 
     @extend .text-t3-up;
+
+    @include mq('custom', 'max', 768) {
+      font: var(--text-t4);
+    }
   }
 
   &__inputs {
@@ -60,6 +168,14 @@
   &__confidence {
     margin-bottom: 4rem;
     @extend .text-t5;
+
+    @include mq('custom', 'max', 768) {
+      font: var(--text-t4);
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 3rem;
+    }
 
     a {
       text-decoration: underline;
@@ -75,20 +191,65 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 3rem;
     align-items: flex-end;
+
+    @include mq('custom', 'max', 1024) {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      align-items: stretch;
+    }
   }
 
   &__logo, &__inn, &__copyright, &__developer {
     grid-column: span 2;
+
+    @include mq('custom', 'max', 768) {
+      grid-column: span 1;
+    }
+  }
+
+  &__inn {
+    @include mq('custom', 'max', 768) {
+      grid-column: 1 / 2;
+    }
   }
 
   &__ogrn {
     grid-column: span 4;
     margin-left: 1.2rem;
+
+
+    @include mq('custom', 'max', 768) {
+      grid-column: span 1;
+      margin-left: 0;
+    }
   }
 
   &__logo {
     width: 10.7rem;
     height: 7rem;
+
+    @include mq('custom', 'max', 1024) {
+      width: 9.6rem;
+      height: 6.3rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 8.3rem;
+      height: 5.7rem;
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 7.9rem;
+      height: 5.1rem;
+    }
 
     svg {
       width: 100%;
@@ -99,13 +260,30 @@
   &__bottom-subtitle {
     margin-bottom: 1rem;
     font: var(--text-t3);
+
+    @include mq('custom', 'max', 768) {
+      font: var(--text-t2);
+    }
   }
 
   &__bottom-info {
     @extend .text-t2-reg;
+
+    @include mq('custom', 'max', 768) {
+      font: var(--text-t1);
+      font-weight: 400;
+    }
   }
 
   &__copyright, &__developer {
     font: var(--text-t3);
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 5.7rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--white-color);
+
+      font: var(--text-t4);
+    }
   }
 }
