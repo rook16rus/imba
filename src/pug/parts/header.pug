@@ -76,7 +76,55 @@ header.header.fix-block
           | /&nbsp;&nbsp;&nbsp;Поиск&nbsp;&nbsp;&nbsp;/
         a.header__logo(href="/")
           +icon-multi('logo')
-        button.header__burger(type="button")
+        button.header__burger-button(type="button")
           span
           span
+  .header__burger
+    .container
+      .header__burger-top
+        a.header__burger-logo(href="/")
+          +icon-multi('logo')
+        button.header__burger-search
+          | /&nbsp;&nbsp;&nbsp;Поиск&nbsp;&nbsp;&nbsp;/
+        button.header__burger-close
+          span
+          span
+      .header__burger-nav
+        .header__burger-nav-block
+          h4.header__burger-subtitle
+            | Направления
+          ul.header__burger-menu
+            for item in headerBottomMenu
+              li.header__burger-menu-item
+                a.header__burger-menu-link(href=item.link)= item.text
+        .header__burger-nav-block
+          h4.header__burger-subtitle
+            | Навигация
+          ul.header__burger-menu
+            for item in headerTopMenu
+              li.header__burger-menu-item
+                a.header__burger-menu-link(href=item.link)= item.text
+      .header__burger-bottom
+        .header__burger-addresses
+          .header__burger-address-block
+            span.header__burger-city
+              | Москва
+            address.header__burger-address
+              | Научный проезд, 14А, стр. 1, БЦ SMART PARK
+            a.header__burger-phone(href="84959693977")
+              | +7 (495) 969 39 77
+          .header__burger-address-block
+            span.header__burger-city
+              | Санкт-Петербург
+            address.header__burger-address
+              | Лиговский проспект, 50 к. 12, офис 23
+            a.header__burger-phone(href="88127673967")
+              | +7 (812) 767-39-67
+        ul.header__burger-socials
+          li.header__burger-social
+            a.header__burger-social-link(href="#")
+              +imgLazy("socials-1.svg")
+          li.header__burger-social
+            a.header__burger-social-link(href="#")
+              +imgLazy("socials-2.svg")
 

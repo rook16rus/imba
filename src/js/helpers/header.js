@@ -1,14 +1,25 @@
+import {disableScroll, enableScroll} from "./disableScroll";
+
 export default function header() {
   const header = document.querySelector('.header');
 
-  // const burger = document.querySelector('.header__burger');
-  // const mobileNavigation = document.querySelector('.header__mobile')
-  //
-  // burger.addEventListener('click', function (e) {
-  //   e.currentTarget.classList.toggle('active');
-  //   mobileNavigation.classList.toggle('active');
-  //   header.classList.toggle('active');
-  // })
+  const burger = document.querySelector('.header__burger-button');
+  const burgerClose = document.querySelector('.header__burger-close');
+  const mobileNavigation = document.querySelector('.header__burger')
+
+  burger.addEventListener('click', function (e) {
+    mobileNavigation.classList.add('is-active');
+    header.classList.add('is-active');
+
+    disableScroll();
+  })
+
+    burgerClose.addEventListener('click', () => {
+      mobileNavigation.classList.remove('is-active');
+      header.classList.remove('is-active');
+
+      enableScroll();
+    })
 
   checkScroll();
   window.addEventListener('scroll', checkScroll);
