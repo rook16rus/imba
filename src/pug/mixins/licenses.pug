@@ -19,11 +19,11 @@
   ]
 
 mixin licenses()
-  section.licenses&attributes(attributes)
+  section.licenses(data-scroll-section)&attributes(attributes)
     .container
-      h2.licenses__title.section-title
+      h2.licenses__title.section-title.is-words-up(data-splitting="chars" data-scroll data-scroll-offset="10%")
         | Лицензии
-      ul.licenses__list
+      ul.licenses__list(data-scroll data-scroll-offset="20%")
         for item in licenses
           li.licenses__item
             +picture(item.img)

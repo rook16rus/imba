@@ -37,16 +37,20 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
 
-    @include mq('custom', 'max', 1024) {
-
-    }
-
     @include mq('custom', 'max', 768) {
       grid-template-columns: repeat(2, 1fr);
     }
 
     @include mq('custom', 'max', 640) {
       gap: 2rem;
+    }
+
+    &.is-inview {
+      .licenses__item img, .licenses__item-text  {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
     }
   }
 
@@ -60,6 +64,12 @@
       max-height: 12.4rem;
       margin-bottom: 5rem;
       object-fit: contain;
+
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(3rem);
+
+      transition: 0.4s ease-in-out;
 
       @include mq('custom', 'max', 1024) {
         margin-bottom: 4rem;
@@ -79,6 +89,13 @@
   &__item-text {
     @extend .title-h5;
     text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3rem);
+
+    transition: 0.4s ease-in-out;
+    transition-delay: 0.2s;
 
     @include mq('custom', 'max', 640) {
       font: var(--text-t3-medium);

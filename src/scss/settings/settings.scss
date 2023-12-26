@@ -320,7 +320,8 @@ a:focus {
 .section-title {
   @extend .title-h1;
 
-  span {
+  span.red {
+    display: inline-block;
     color: var(--red-color);
   }
 }
@@ -491,4 +492,33 @@ a:focus {
 
 .ymaps-2-1-79-ground-pane {
   filter: invert(100%) grayscale(1);
+}
+
+.is-fade-up {
+  transform: translateY(2rem);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.4s ease-in-out;
+
+  &.is-inview{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.is-words-up {
+  .word {
+    overflow: hidden;
+  }
+
+  .char {
+    transform: translateY(100%);
+    transition: 0.4s ease-in-out;
+  }
+
+  &.is-inview .char {
+    transform: translateY(0);
+  }
 }

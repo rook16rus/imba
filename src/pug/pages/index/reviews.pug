@@ -17,10 +17,10 @@
     },
   ]
 
-section.reviews.page-section--small
+section.reviews.page-section--small(data-scroll-section)
   .container
     +section-header("Клиенты<br>о работе с нами", "Смотреть все", "button--black").section-header--black
-    ul.reviews__list
+    ul.reviews__list(data-scroll data-scroll-offset="20%")
       for item in reviews
         li.reviews__item
           p.reviews__item-text!= item.text

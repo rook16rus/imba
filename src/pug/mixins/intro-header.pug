@@ -48,13 +48,13 @@
   ]
 
 mixin intro-header(title, breadcrumbs, buttons)
-  .intro-header
+  .intro-header&attributes(attributes)
     .intro-header__left
       if breadcrumbs
         +breadcrumbs()
-      h1.intro-header__title!= title
+      h1.intro-header__title(data-splitting="chars" data-scroll)!= title
       if buttons
-        .intro-header__buttons
+        .intro-header__buttons(data-scroll data-scroll-class="is-hidden" data-scroll-offset="0, 300" data-scroll-repeat=true)
           button.intro-header__button.button.button.button--white
             span Подобрать решение
             +icon-multi("arrow-right")

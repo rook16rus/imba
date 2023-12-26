@@ -39,6 +39,8 @@
     left: 2rem;
     z-index: -1;
 
+    background-color: var(--black-color);
+
     @extend .text-t5;
 
     @include mq('custom', 'max', 768) {

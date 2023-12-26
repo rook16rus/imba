@@ -20,6 +20,8 @@
     margin-bottom: 3rem;
     margin-right: -3rem;
 
+    transition-delay: 0.1s;
+
     @include mq('custom', 'max', 640) {
       margin-bottom: 4rem;
     }

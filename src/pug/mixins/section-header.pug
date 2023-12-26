@@ -1,6 +1,6 @@
 mixin section-header(title, link, linkMod)
   header.section-header&attributes(attributes)
-    h2.section-header__title.section-title!= title
-    a.section-header__link.button(class=linkMod href="#")
+    h2.section-header__title.section-title.is-words-up(data-splitting="chars" data-scroll  data-scroll-offset="10%")!= title
+    a.section-header__link.button.is-fade-up(class=linkMod href="#" data-scroll data-scroll-offset="10%")
       span= link
       +icon-multi("arrow-right")

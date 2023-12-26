@@ -7,11 +7,15 @@
     {
       number: "350",
       text: "> 350 полученных сертификаций вендоров&nbsp; <span> у&nbsp;сотрудников тех.департамента</span>",
-      mod: "numbers__card--one-column"
+      mod: "numbers__card--one-column",
+      scroll: true,
+      scrollSpeed: "-1"
     },
     {
       number: "40",
       text: "> 40 квалифицированных инженеров и архитекторов",
+      scroll: true,
+      scrollSpeed: "2"
     },
     {
       number: "20",
@@ -25,10 +29,15 @@
     },
   ]
 
-section.numbers.page-section--large
+section.numbers.page-section--large(data-scroll-section)
   .container
     .numbers__wrapper
       for item in numbers
-        .numbers__card(class=`${item.mod ? item.mod : ''}`)
-          span.numbers__card-number= item.number
-          p.numbers__card-text!= item.text
+        if item.scroll
+          .numbers__card(class=`${item.mod ? item.mod : ''}` data-scroll data-scroll-speed=item.scrollSpeed)
+            span.numbers__card-number= item.number
+            p.numbers__card-text!= item.text
+        else
+          .numbers__card(class=`${item.mod ? item.mod : ''}`)
+            span.numbers__card-number= item.number
+            p.numbers__card-text!= item.text

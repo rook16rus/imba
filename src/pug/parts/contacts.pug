@@ -1,11 +1,11 @@
-section.contacts.page-section--small
+section.contacts.page-section--small(data-scroll-section)
   .container
-    h2.contacts__title.section-title
+    h2.contacts__title.section-title.is-words-up(data-splitting="chars" data-scroll data-scroll-offset="10%")
       | Контакты
-    .contacts__buttons
+    .contacts__buttons.is-fade-up(data-scroll data-scroll-offset="10%")
       button.contacts__button.button.button--black.button--small.is-active(data-coords="55.65588013486305,37.55539099999997")
         | Москва
       button.contacts__button.button.button--black.button--small(data-coords="59.92341906419587,30.36289499999994")
         | Санкт-Петербург
-    .contacts__map.js-map#map(data-api-key="ваш API-ключ" data-zoom=17 data-marker="assets/images/marker.svg")
+    .contacts__map.js-map#map(data-api-key="ваш API-ключ" data-zoom=17 data-placemark="assets/images/marker.svg")
 

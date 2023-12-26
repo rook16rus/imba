@@ -63,8 +63,8 @@ export default function contactsMap() {
     const marker = new ymaps.Placemark([+coords[0], +coords[1]], {}, {
       iconLayout: 'default#image',
       iconImageHref: markerIcon,
-      iconImageSize: [64, 64],
-      iconImageOffset: [-32, -32]
+      iconImageSize: [32, 32],
+      iconImageOffset: [-16, -16]
     });
 
     map.geoObjects.add(marker);

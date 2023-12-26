@@ -24,6 +24,15 @@ import contactsMap from "./helpers/contactsMap";
 import header from "./helpers/header";
 import introSlider from "./helpers/introSlider";
 import projectsSlider from "./helpers/projectsSlider";
+import locomotiveScroll from "./helpers/locomotiveScroll";
+import splitting from "./helpers/splitting";
+import animations from "./helpers/animations";
+
+// setTimeout(() => {
+//   if (document.body.classList.contains('animatable')) return
+//   document.body.classList.add('animatable')
+//   animations();
+// },  3000)
 
 documenReady(() => {
   window.imba_API = { };
@@ -44,11 +53,13 @@ documenReady(() => {
   customSelects();
   accordions();
 
+  locomotiveScroll();
   introSlider();
   newsSlider();
   contactsMap();
-  header();
   projectsSlider();
+  splitting();
+  header();
 });
 
 document.fonts.ready.then((res) => {
@@ -59,9 +70,9 @@ document.fonts.ready.then((res) => {
 window.addEventListener('load', function () {
   document.body.classList.add('loaded');
 
-  setTimeout(() => {
-    document.body.classList.add('animatable')
-  }, 300);
+  if (document.body.classList.contains('animatable')) return
+  document.body.classList.add('animatable');
+  animations();
 });
 
 window.addEventListener('resize', () => {

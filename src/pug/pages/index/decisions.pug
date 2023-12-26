@@ -22,14 +22,14 @@
     }
   ]
 
-section.decisions.page-section--small
+section.decisions.page-section--small(data-scroll-section)
   .container
     header.decisions__header
-      h2.decisions__title.section-title
-        | #[span Каталог решений &nbsp;] для ваших задач
-      .decisions__img
-        +imgLazy("decision-1.svg")
-    ul.decisions__list
+      h2.decisions__title.section-title.is-words-up(data-splitting="chars" data-scroll data-scroll-offset="10%")
+        | #[span.red Каталог решений &nbsp;] для ваших задач
+      .decisions__img.is-fade-up(data-scroll data-scroll-offset="10%")
+        img(src="assets/images/decision-1.svg" alt='Фото')
+    ul.decisions__list(data-scroll data-scroll-offset="20%")
       for item in decisions
         li.decisions__item
           h3.decisions__item-title= item.title

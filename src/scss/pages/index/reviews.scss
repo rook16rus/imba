@@ -30,6 +30,16 @@
     }
   }
 
+  &__list {
+    &.is-inview {
+      .reviews__item {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
+
   &__item {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -38,6 +48,12 @@
     padding: 3rem 0;
 
     border-top: 1px solid var(--black-color);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3rem);
+
+    transition: 0.4s ease-in-out;
 
     @include mq('custom', 'max', 768) {
       grid-template-columns: auto 1fr;
@@ -63,6 +79,12 @@
         line-height: 73%;
         letter-spacing: -1.1rem;
       }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    &__item:nth-child(#{$i + 1}) {
+      transition-delay: #{$i * 2}00ms;
     }
   }
 

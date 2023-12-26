@@ -18,6 +18,7 @@
 
   &__link {
     flex-shrink: 0;
+    transition-delay: 0.1s;
 
     @include mq('custom', 'max', 768) {
       order: 1;

@@ -13,9 +13,9 @@
     {link: "#"},
   ]
 
-section.intro.page-section--small(style="background-image: url('./assets/images/intro-bg.png')" )
+section.intro.page-section--small(style="background-image: url('./assets/images/intro-bg.png')" data-scroll-section)
   .container
-    +intro-header("Создаем&nbsp;<span> цифровое превосходство<span>", false, true)
+    +intro-header("Создаем&nbsp;<span class='red' data-scroll data-scroll-sticky data-scroll-offset='70' data-scroll-target='#intro-target'> цифровое превосходство<span>", false, true)#intro-target
     .intro__bottom
       .intro__bottom-left
         .intro__content-photo

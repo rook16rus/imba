@@ -13,25 +13,26 @@ export default function header() {
 
     disableScroll();
   })
+  burgerClose.addEventListener('click', () => {
+    mobileNavigation.classList.remove('is-active');
+    header.classList.remove('is-active');
 
-    burgerClose.addEventListener('click', () => {
-      mobileNavigation.classList.remove('is-active');
-      header.classList.remove('is-active');
+    enableScroll();
+  })
 
-      enableScroll();
-    })
+  const locoScroll = window.locomotiveScroll;
 
-  checkScroll();
-  window.addEventListener('scroll', checkScroll);
+  checkScroll(locoScroll.initPosition.y);
+  locoScroll.on("scroll", (obj) => checkScroll(obj.scroll.y));
 
-  function checkScroll() {
-    let topOffset = 300;
+  function checkScroll(scrollPosition) {
+    let topOffset = 500;
 
     if (window.innerWidth <= 1024) {
       topOffset = 0;
     }
 
-    if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top + topOffset) {
+    if (scrollPosition > topOffset) {
       header.classList.add('is-visible');
     } else {
       header.classList.remove('is-visible');
