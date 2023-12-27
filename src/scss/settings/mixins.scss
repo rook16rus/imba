@@ -18,12 +18,15 @@
 
 @mixin customScrollbar {
   &::-webkit-scrollbar {
-    width: 0.2rem;
-    background-color: var(--color-grey-300);
+    width: 2.5rem;
+    border-left: 1px solid var(--white-color);
+    border-right: 1px solid var(--white-color);
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--color-grey-600);
+    width: 100%;
+    background-color: var(--white-color);
+    cursor: grab;
   }
 
   &::-webkit-scrollbar-button {
