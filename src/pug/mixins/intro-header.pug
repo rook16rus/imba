@@ -58,7 +58,7 @@ mixin intro-header(title, breadcrumbs, buttons)
           button.intro-header__button.button.button.button--white
             span Подобрать решение
             +icon-multi("arrow-right")
-          a.intro-header__button(href="#")
+          a.intro-header__button.link(href="#")
             | О компании
     .intro-header__right
       nav.intro-header__menu
@@ -69,7 +69,7 @@ mixin intro-header(title, breadcrumbs, buttons)
                 if item.list
                   span= item.title
                 else
-                  a(href=item.link)= item.title
+                  a.link(href=item.link)= item.title
                 if item.list
                   button.intro-header__menu-item-button
                     +icon-multi("arrow-down")
@@ -78,7 +78,7 @@ mixin intro-header(title, breadcrumbs, buttons)
                   ul.intro-header__menu-item-list
                     for i in item.list
                       li.intro-header__menu-item-list-item
-                        a(href=i.link)= i.title
+                        a.link(href=i.link)= i.title
       button.intro-header__search
         | /&nbsp;&nbsp;&nbsp;Поиск&nbsp;&nbsp;&nbsp;/
       a.intro-header__logo(href=".")

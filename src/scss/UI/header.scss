@@ -88,6 +88,10 @@
     &--red {
       margin-right: 2.7rem;
       color: var(--red-color);
+
+      .header__menu-link::before {
+        background-color: var(--red-color);
+      }
     }
   }
 
@@ -130,6 +134,14 @@
   }
 
   &__logo {
+    transition: 0.3s;
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
     @include mq('custom', 'max', 1024) {
       order: -1;
     }

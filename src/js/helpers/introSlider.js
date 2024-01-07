@@ -11,7 +11,7 @@ export default function introSlider() {
     spaceBetween: 20,
     breakpoints: {
       1024: {
-        spaceBetween: 0,
+        spaceBetween: 40,
         slidesPerView: 1
       }
     },

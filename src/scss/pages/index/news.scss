@@ -90,6 +90,10 @@
     @include mq('custom', 'max', 640) {
       min-height: 35.7rem;
     }
+
+    .swiper-wrapper {
+      width: auto;
+    }
   }
 
   &__slide {

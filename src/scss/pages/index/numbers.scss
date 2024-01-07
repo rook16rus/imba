@@ -28,7 +28,15 @@
     &--one-column {
       display: flex;
       flex-direction: column;
+      gap: 0;
       align-items: flex-start;
+
+      @include mq('custom', 'max', 374) {
+        &#{&} {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
 
     &--inner {
@@ -113,7 +121,7 @@
         }
 
         @include mq('custom', 'max', 374) {
-          margin-bottom: 0;
+          margin-bottom: 1rem;
           font-size: 13rem;
         }
       }
@@ -194,7 +202,7 @@
         }
 
         @include mq('custom', 'max', 374) {
-          margin-bottom: 0;
+          margin-bottom: 1rem;
         }
       }
 

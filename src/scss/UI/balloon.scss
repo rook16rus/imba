@@ -1,0 +1,68 @@
+.balloon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 15.2rem;
+
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 0.7rem;
+
+  &__left {
+    width: 2.4rem;
+    border-right: 1px solid var(--gray-color);
+  }
+
+  &__right {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    padding: 0.4rem 0.8rem 0.6rem 1rem;
+  }
+
+  &__office-name {
+    font: var(--regular) 1.4rem/120% "Microsoft Sans Serif";
+    color: var(--black-color);
+  }
+
+  &__office-view {
+    font: var(--regular) 1.2rem/120% "Microsoft Sans Serif";
+    color: var(--gray-color);
+  }
+}
+
+.ymaps-2-1-79-balloon__content {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0;
+  background-color: transparent !important;
+  font: inherit !important;
+  min-height: auto !important;
+}
+
+.ymaps-2-1-79-balloon {
+  position: absolute;
+  top: 50% !important;
+  left: 100% !important;
+  transform: translateY(-50%);
+
+  border: 0;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.ymaps-2-1-79-balloon-pane {
+  z-index: 2000 !important;
+}
+
+.ymaps-2-1-79-balloon__layout {
+  background-color: transparent !important;
+}
+
+.ymaps-2-1-79-balloon__tail {
+  display: none !important;
+}
+
+.ymaps-2-1-79-balloon__close {
+  display: none !important;
+}

@@ -34,6 +34,7 @@ import animations from "./helpers/animations";
 //   animations();
 // },  3000)
 
+
 documenReady(() => {
   window.imba_API = { };
 
@@ -69,6 +70,8 @@ document.fonts.ready.then((res) => {
 
 window.addEventListener('load', function () {
   document.body.classList.add('loaded');
+  alignHeights(".licenses", ".licenses__item img");
+  alignHeights(".news__slider", ".news-card__content");
 
   if (document.body.classList.contains('animatable')) return
   document.body.classList.add('animatable');

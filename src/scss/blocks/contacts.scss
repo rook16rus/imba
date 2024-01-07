@@ -50,13 +50,6 @@
   &__map {
     height: 50.9rem;
 
-    background-color: var(--gray-color);
-    border: 1px solid #161616;
-
-    @include mq('custom', 'max', 1024) {
-
-    }
-
     @include mq('custom', 'max', 768) {
       margin-left: -3rem;
       width: calc(100% + 6rem);
@@ -65,6 +58,10 @@
     @include mq('custom', 'max', 640) {
       margin-left: -2rem;
       width: calc(100% + 4rem);
+    }
+
+    .ymaps-2-1-79-map-bg {
+      background: none !important;
     }
   }
 }

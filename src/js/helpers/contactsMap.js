@@ -60,11 +60,23 @@ export default function contactsMap() {
   }
 
   function addMarker(coords, map, markerIcon) {
-    const marker = new ymaps.Placemark([+coords[0], +coords[1]], {}, {
+    const marker = new ymaps.Placemark([+coords[0], +coords[1]], {
+      balloonContent: `
+          <div class="balloon">
+            <div class="balloon__left"></div>
+            <div class="balloon__right">
+                <span class="balloon__office-name">Smart park ★ 4,5</span>
+                <span class="balloon__office-view">Бизнес-центр</span>
+            </div>
+          </div>
+      `,
+      hideIconOnBalloonOpen: false
+    }, {
       iconLayout: 'default#image',
       iconImageHref: markerIcon,
       iconImageSize: [32, 32],
-      iconImageOffset: [-16, -16]
+      iconImageOffset: [-16, -16],
+      hideIconOnBalloonOpen: false
     });
 
     map.geoObjects.add(marker);

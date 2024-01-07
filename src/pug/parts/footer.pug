@@ -55,20 +55,20 @@ footer.footer(data-scroll-section data-scroll data-scroll-offset="10%")
             | Москва
           address.footer__address
             | Научный проезд, 14А, стр. 1, БЦ SMART PARK
-          a.footer__phone(href="tel:+74959693977")
+          a.footer__phone.link(href="tel:+74959693977")
             | +7 (495) 969 39 77
         .footer__block
           h4.footer__subtitle
             | Санкт-Петербург
           address.footer__address
             | Лиговский проспект, 50 к. 12, офис 23
-          a.footer__phone(href="tel:+78127673967")
+          a.footer__phone.link(href="tel:+78127673967")
             | +7 (812) 767-39-67
       .footer__column
         .footer__block
           h4.footer__subtitle
             | Email
-          a.footer__email(href="mailto:hello@imba-it.ru")
+          a.footer__email.link(href="mailto:hello@imba-it.ru")
             | hello@imba-it.ru
         .footer__block
           h4.footer__subtitle
@@ -87,14 +87,14 @@ footer.footer(data-scroll-section data-scroll data-scroll-offset="10%")
           ul.footer__menu
             for item in footerDirections
               li.footer__menu-item
-                a.footer__menu-item-link(href=item.link)= item.text
+                a.footer__menu-item-link.link(href=item.link)= item.text
         .footer__block
           h4.footer__subtitle
             | Навигация
           ul.footer__menu
             for item in footerNavigation
               li.footer__menu-item
-                a.footer__menu-item-link(href=item.link)= item.text
+                a.footer__menu-item-link.link(href=item.link)= item.text
       .footer__column
         .footer__block
           h4.footer__subtitle
