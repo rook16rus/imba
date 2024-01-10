@@ -8,5 +8,16 @@ export default function locomotiveScroll() {
 
   new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"))
 
+  const noScrollElements = document.querySelectorAll('.js-no-scroll');
+  noScrollElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      scroll.stop();
+    })
+
+    el.addEventListener('mouseleave', () => {
+      scroll.start();
+    })
+  })
+
   window.locomotiveScroll = scroll;
 }
