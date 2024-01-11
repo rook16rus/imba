@@ -107,6 +107,14 @@
       padding: 2rem 0;
     }
 
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        svg {
+          color: var(--red-color);
+        }
+      }
+    }
+
     &:last-child {
       border-bottom: 1px solid var(--black-color);
     }
@@ -183,6 +191,8 @@
       width: 1.8rem;
       height: 3.2rem;
 
+      transition: 0.3s;
+
       @include mq('custom', 'max', 640) {
         width: 0.7rem;
         height: 1.4rem;
@@ -213,19 +223,10 @@
     }
 
     svg {
-      margin-left: 3rem;
+      margin-left: 1.5rem;
 
       @include mq('custom', 'max', 640) {
-        display: none;
         margin-left: 1rem;
-      }
-
-      &:last-of-type {
-        display: none;
-
-        @include mq('custom', 'max', 640) {
-          display: block;
-        }
       }
     }
   }

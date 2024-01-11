@@ -116,8 +116,12 @@
       font: var(--title-h1);
     }
 
-    span {
+    span.red {
       color: var(--red-color);
+    }
+
+    .word {
+      display: inline-flex;
     }
   }
 
