@@ -42,17 +42,22 @@ export default function contactsMap() {
       }
     )
 
-    const DARK_MAP = 'custom#dark';
-    ymaps.layer.storage.add(DARK_MAP, function DarkLayer() {
-      // Ссылка на темные тайлы Яндекс.Карт
-      // От стандартной отличается наличием &theme=dark
-      return new ymaps.Layer(
-        'https://core-renderer-tiles.maps.yandex.net/tiles?l=map&theme=dark',
-      );
-    });
-
-    /* Связываем слой с типом карты */
-    ymaps.mapType.storage.add(DARK_MAP, new ymaps.MapType('Dark Map', [DARK_MAP]));
+    yandexMap.behaviors.disable('scrollZoom');
+    const body = document.getElementsByTagName('body')[0];
+    body.onkeydown = callbackDown;
+    body.onkeyup = callbackUp;
+    function callbackDown(e){
+      if(e.keyCode === 17){
+        window.locomotiveScroll.stop();
+        yandexMap.behaviors.enable(['scrollZoom']);
+      }
+    }
+    function callbackUp(e){
+      if(e.keyCode === 17){
+        window.locomotiveScroll.start();
+        yandexMap.behaviors.disable(['scrollZoom']);
+      }
+    }
 
     buttons.forEach(button => {
       addMarker(button.dataset.coords.split(','), yandexMap, placemark);
