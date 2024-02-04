@@ -26,7 +26,7 @@ export default function header() {
   locoScroll.on("scroll", (obj) => checkScroll(obj.scroll.y));
 
   function checkScroll(scrollPosition) {
-    let topOffset = 500;
+    let topOffset = 400;
 
     if (window.innerWidth <= 1024) {
       topOffset = 0;

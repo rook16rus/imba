@@ -35,7 +35,7 @@ export default function contactsMap() {
       map, {
         center: [+coords[0], +coords[1]],
         zoom,
-        controls: [],
+        controls: ["zoomControl"],
       }, {
         searchControlProvider: "yandex#search",
         suppressMapOpenBlock: true

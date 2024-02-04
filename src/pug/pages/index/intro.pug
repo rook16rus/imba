@@ -8,9 +8,9 @@
 
 -
   const introSlider = [
-    {link: "#"},
-    {link: "#"},
-    {link: "#"},
+    {link: "#", img: "intro-slider-1.jpg"},
+    {link: "#", img: "intro-slider-2.jpg"},
+    {link: "#", img: "intro-slider-3.jpg"},
   ]
 
 section.intro.page-section--small(style="background-image: url('./assets/images/intro-bg.png')" data-scroll-section)
@@ -29,7 +29,7 @@ section.intro.page-section--small(style="background-image: url('./assets/images/
           .swiper-wrapper
             for item in introSlider
               a.intro__slide.swiper-slide(href=item.link)
-                +pictureLazy("intro-slider-1.jpg")
+                +pictureLazy(item.img)
 
 
 

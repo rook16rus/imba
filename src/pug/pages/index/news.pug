@@ -38,9 +38,13 @@
     },
   ]
 
-section.news.page-section--very-large.js-news-section(data-scroll-section)
+section.news.page-section--very-large.js-news-section#section-news(data-scroll-section)
   .container
-    +section-header("Новости", "Медиацентр", "button--white").section-header--white
+    +section-header(
+      "Новости",
+      "Медиацентр",
+      "button--white",
+    ).section-header--white
     .news__slider-container
       .news__navigation
         .swiper-pagination

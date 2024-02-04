@@ -121,6 +121,11 @@
     align-items: flex-end;
 
     @include mq('custom', 'max', 1024) {
+      width: 54rem;
+      margin-left: 0;
+    }
+
+    @include mq('custom', 'max', 767) {
       overflow: visible;
     }
 
@@ -131,7 +136,7 @@
     .swiper-wrapper {
       height: 35rem;
 
-      @include mq('custom', 'max', 1024) {
+      @include mq('custom', 'max', 768) {
         height: auto;
       }
     }
@@ -155,13 +160,17 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       transform-origin: center;
     }
   }
 
   .slider-navigation {
     @include mq('custom', 'max', 1024) {
+      margin-right: auto;
+    }
+
+    @include mq('custom', 'max', 768) {
       display: none;
     }
   }

@@ -21,7 +21,6 @@ export default function yandexMap() {
     map = new ymaps.Map('map', {
       center: [...coords],
       zoom,
-      controls: [""]
     });
 
     map.controls.remove('geolocationControl'); // удаляем геолокацию

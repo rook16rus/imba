@@ -4,7 +4,9 @@ export default function locomotiveScroll() {
   const scroll = new LocomotiveScroll({
     el: document.querySelector('.page-wrapper'),
     smooth: true,
-    multiplier: 1.5
+    multiplier: 1,
+    lerp: 0.2,
+    resetNativeScroll: false
   });
 
   new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"))

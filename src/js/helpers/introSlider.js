@@ -9,8 +9,12 @@ export default function introSlider() {
   const swiper = new Swiper('.intro__slider', {
     slidesPerView: "auto",
     spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
     breakpoints: {
-      1024: {
+      768: {
         spaceBetween: 40,
         slidesPerView: 1
       }
