@@ -29,6 +29,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    align-items: flex-start;
     gap: 3rem;
     margin-bottom: 8rem;
 

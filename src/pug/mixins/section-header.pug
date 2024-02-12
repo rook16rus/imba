@@ -1,7 +1,8 @@
 mixin section-header(title, link, linkMod, target)
   header.section-header&attributes(attributes)
     if target
-      h2.section-header__title.section-title.is-words-up(data-splitting="chars" data-scroll data-scroll-offset="10%" data-scroll-sticky data-scroll-target=`#${target}`)!= title
+      //.section-header__title-container(data-scroll data-scroll-offset="10%" data-scroll-sticky data-scroll-target=`#${target}`)
+      h2.section-header__title.section-title.is-words-up(data-splitting="chars" data-scroll data-scroll-offset="10%")!= title
     else
       h2.section-header__title.section-title.is-words-up(data-splitting="chars" data-scroll  data-scroll-offset="10%" )!= title
     a.section-header__link.button.is-fade-up(class=linkMod href="#" data-scroll data-scroll-offset="10%")

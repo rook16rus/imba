@@ -9,11 +9,9 @@ export default function projectsSlider() {
     const slider = section.querySelector('.projects__slider');
     const swiper = new Swiper(slider, {
       slidesPerView: 1.1,
-      autoHeight: true,
       spaceBetween: 15,
       breakpoints: {
         891: {
-          autoHeight: false,
           slidesPerView: 'auto',
           spaceBetween: 0
         }

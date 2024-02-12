@@ -303,11 +303,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-    margin-top: auto;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: auto;
 
     @include mq('custom', 'max', 768) {
       grid-template-columns: 1fr;
+    }
+
+    @include mq('custom', 'max', 767) {
+      margin-top: auto;
+      margin-bottom: 0;
     }
   }
 
@@ -332,6 +337,7 @@
   }
 
   &__burger-bottom {
+    margin-top: 4rem;
     padding-top: 4rem;
     border-top: 1px solid var(--white-color);
   }

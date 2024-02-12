@@ -534,6 +534,8 @@ a:focus {
 .is-words-up {
   .word {
     overflow: hidden;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
   }
 
   .char {
