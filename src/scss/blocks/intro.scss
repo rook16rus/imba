@@ -123,15 +123,14 @@
     @include mq('custom', 'max', 1024) {
       width: 54rem;
       max-width: 100%;
-      margin-left: 0;
+      margin-left: auto;
+      margin-right: 0;
     }
 
     @include mq('custom', 'max', 767) {
       overflow: visible;
-    }
-
-    .slider-navigation {
-      margin-bottom: 3.2rem;
+      margin-left: 0;
+      margin-right: auto;
     }
 
     .swiper-wrapper {
@@ -167,9 +166,7 @@
   }
 
   .slider-navigation {
-    @include mq('custom', 'max', 1024) {
-      margin-right: auto;
-    }
+    margin-bottom: 3.2rem;
 
     @include mq('custom', 'max', 768) {
       display: none;
